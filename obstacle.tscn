@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyj02rxie7aj8"]
+
+[ext_resource type="Script" uid="uid://dmeosrfk4ov3n" path="res://pitfall.gd" id="1_aubd6"]
+[ext_resource type="Texture2D" uid="uid://dif43h3dbtmn1" path="res://assets/graphic/pitFall.png" id="2_aubd6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qcbvg"]
+size = Vector2(49, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aubd6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_aubd6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Obstacle" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_aubd6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_qcbvg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.499998, 4.76837e-07)
+scale = Vector2(0.0445313, 0.04375)
+sprite_frames = SubResource("SpriteFrames_aubd6")

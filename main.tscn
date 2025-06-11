@@ -1,0 +1,244 @@
+[gd_scene load_steps=7 format=3 uid="uid://cnn65u2hnoyip"]
+
+[ext_resource type="Texture2D" uid="uid://cmqm1fkr1wlmw" path="res://assets/graphic/background.png" id="1_7mycd"]
+[ext_resource type="PackedScene" uid="uid://524malakitx1" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://dmy2axsdyijuw" path="res://grid_square.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://6hklnp1yec0m" path="res://spawner.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bte7gsklnqrgx" path="res://antlion.tscn" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://bukdaso444588" path="res://label.gd" id="5_lquwl"]
+
+[node name="main" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(382.5, 198.5)
+scale = Vector2(0.565, 0.558005)
+texture = ExtResource("1_7mycd")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(1.49, 1.49)
+
+[node name="Player" parent="." instance=ExtResource("1_ig7tw")]
+visibility_layer = 2
+z_index = 1
+position = Vector2(391, 326)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="spawner" parent="." instance=ExtResource("3_h2yge")]
+position = Vector2(391, -121)
+
+[node name="spawner2" parent="." instance=ExtResource("3_h2yge")]
+position = Vector2(263, -121)
+
+[node name="spawner3" parent="." instance=ExtResource("3_h2yge")]
+position = Vector2(327, -121)
+
+[node name="spawner4" parent="." instance=ExtResource("3_h2yge")]
+position = Vector2(454, -121)
+
+[node name="spawner5" parent="." instance=ExtResource("3_h2yge")]
+position = Vector2(518, -121)
+
+[node name="Antlion" parent="." instance=ExtResource("4_1bvp3")]
+z_index = 2
+position = Vector2(391, 460)
+
+[node name="gridSmall" type="Node" parent="."]
+
+[node name="gridSquare" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(263, 71)
+
+[node name="gridSquare2" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(327, 71)
+
+[node name="gridSquare3" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(391, 71)
+
+[node name="gridSquare4" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(519, 71)
+
+[node name="gridSquare5" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(455, 71)
+
+[node name="gridSquare6" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(263, 135)
+
+[node name="gridSquare7" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(327, 135)
+
+[node name="gridSquare8" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(391, 135)
+
+[node name="gridSquare9" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(519, 135)
+
+[node name="gridSquare10" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(455, 135)
+
+[node name="gridSquare11" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(263, 199)
+
+[node name="gridSquare12" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(327, 199)
+
+[node name="gridSquare13" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(391, 199)
+
+[node name="gridSquare14" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(455, 199)
+
+[node name="gridSquare15" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(519, 199)
+
+[node name="gridSquare16" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(263, 262)
+
+[node name="gridSquare17" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(327, 262)
+
+[node name="gridSquare18" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(391, 262)
+
+[node name="gridSquare19" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(455, 262)
+
+[node name="gridSquare20" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(519, 262)
+
+[node name="gridSquare21" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(263, 326)
+
+[node name="gridSquare22" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(327, 326)
+
+[node name="gridSquare23" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(391, 326)
+
+[node name="gridSquare24" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(455, 326)
+
+[node name="gridSquare25" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(519, 326)
+
+[node name="gridSquare26" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(263, 390)
+
+[node name="gridSquare27" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(327, 390)
+
+[node name="gridSquare28" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(391, 390)
+
+[node name="gridSquare29" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(455, 390)
+
+[node name="gridSquare30" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(519, 390)
+
+[node name="gridSquare31" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(263, 454)
+
+[node name="gridSquare32" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(327, 454)
+
+[node name="gridSquare33" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(391, 454)
+
+[node name="gridSquare34" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(455, 454)
+
+[node name="gridSquare35" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(519, 454)
+
+[node name="gridSquare36" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(263, -57)
+
+[node name="gridSquare37" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(327, -57)
+
+[node name="gridSquare38" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(391, -57)
+
+[node name="gridSquare39" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(519, -57)
+
+[node name="gridSquare40" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(455, -57)
+
+[node name="gridSquare41" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(263, 7)
+
+[node name="gridSquare42" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(327, 7)
+
+[node name="gridSquare43" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(391, 7)
+
+[node name="gridSquare44" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(519, 7)
+
+[node name="gridSquare45" parent="gridSmall" instance=ExtResource("2_0xm2m")]
+visible = false
+position = Vector2(455, 7)
+
+[node name="Obstacles" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 41.0
+offset_top = 40.0
+offset_right = 224.0
+offset_bottom = 101.0
+text = "Score: 0 "
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("5_lquwl")
+
+[connection signal="ascend" from="Player" to="Label" method="increase"]
+[connection signal="timeout" from="Timer" to="Player" method="reenable"]

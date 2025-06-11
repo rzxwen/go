@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://qarvikir0qx4"]
+
+[ext_resource type="Texture2D" uid="uid://bymobd0ht4cax" path="res://assets/graphic/tutorialScreen.png" id="1_7n6eb"]
+[ext_resource type="Script" uid="uid://bus4f5kqv5s5h" path="res://main_menu.gd" id="1_yb1ct"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_yb1ct")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(579.5, 326.5)
+scale = Vector2(0.833571, 0.766821)
+texture = ExtResource("1_7n6eb")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 134.0
+offset_top = 47.0
+offset_right = 293.0
+offset_bottom = 97.0
+text = "Back to Menu"
+
+[connection signal="pressed" from="Button" to="." method="showMenu"]

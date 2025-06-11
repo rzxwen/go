@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://bte7gsklnqrgx"]
+
+[ext_resource type="Texture2D" uid="uid://bqixbfphtilim" path="res://assets/graphic/antLion.png" id="2_8dvbg"]
+[ext_resource type="Script" uid="uid://bxenmjh0yi73a" path="res://antlion.gd" id="2_wc18e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8dvbg"]
+size = Vector2(113.537, 60.3842)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wc18e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8dvbg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Antlion" type="CharacterBody2D"]
+scale = Vector2(2.76563, 2.76563)
+script = ExtResource("2_wc18e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.13798e-06, -2.75865e-06)
+shape = SubResource("RectangleShape2D_8dvbg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 40.8587)
+scale = Vector2(0.114548, 0.114548)
+sprite_frames = SubResource("SpriteFrames_wc18e")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-6.89663e-07, 1.9887)
+shape = SubResource("RectangleShape2D_8dvbg")

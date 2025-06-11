@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://6hklnp1yec0m"]
+
+[ext_resource type="PackedScene" uid="uid://dmy2axsdyijuw" path="res://grid_square.tscn" id="1_ttk4a"]
+[ext_resource type="Script" uid="uid://bcjailvt5ppy5" path="res://spawner.gd" id="2_ttk4a"]
+
+[node name="spawner" instance=ExtResource("1_ttk4a")]
+script = ExtResource("2_ttk4a")

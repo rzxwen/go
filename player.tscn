@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://524malakitx1"]
+
+[ext_resource type="Texture2D" uid="uid://b0gbk2dho0lbb" path="res://assets/graphic/ant.png" id="2_i3pqv"]
+[ext_resource type="Script" uid="uid://i2gcf0w8e0mp" path="res://player.gd" id="2_onrkg"]
+[ext_resource type="Texture2D" uid="uid://te8x4kvtpts2" path="res://assets/graphic/antDizzy.png" id="3_i3pqv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
+size = Vector2(64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_onrkg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_i3pqv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_i3pqv")
+}],
+"loop": true,
+"name": &"dizzy",
+"speed": 5.0
+}]
+
+[node name="player" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("2_onrkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4flbx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.0496094, 0.0496094)
+sprite_frames = SubResource("SpriteFrames_onrkg")

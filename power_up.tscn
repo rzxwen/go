@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnuf7tjgn7gu1"]
+
+[ext_resource type="Script" uid="uid://7jr4l5y5bk4y" path="res://power_up.gd" id="1_mkoic"]
+[ext_resource type="Texture2D" uid="uid://dan2y7b8mhv0n" path="res://assets/selectOutline.png" id="2_mkoic"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wtpib"]
+radius = 25.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jbbqn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mkoic")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="PowerUp" type="Area2D"]
+collision_mask = 3
+script = ExtResource("1_mkoic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wtpib")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.90625, 0.90625)
+sprite_frames = SubResource("SpriteFrames_jbbqn")
